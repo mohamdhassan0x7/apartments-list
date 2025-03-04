@@ -37,7 +37,7 @@ export default function ApartmentDetails() {
     <div className="min-h-screen flex flex-col items-center bg-gray-100 p-6">
       <div className="max-w-2xl w-full bg-white p-6 rounded-lg shadow-md">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">{apartment.name}</h1>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div>
                 <p className="text-gray-700 mt-4"><strong>Unit Number:</strong> {apartment.unitNumber}</p>
                 <p className="text-gray-700"><strong>Project:</strong> {apartment.project}</p>
@@ -45,7 +45,7 @@ export default function ApartmentDetails() {
                 <p className="text-gray-900 font-bold text-lg mt-2">${apartment.price}</p>
             </div>
             {apartment.imageUrl && (
-            <div className="h-64 relative w-1/2">
+            <div className="h-64 relative w-full lg:w-1/2">
                 <Image 
                 src={apartment.imageUrl} 
                 alt={apartment.name}
