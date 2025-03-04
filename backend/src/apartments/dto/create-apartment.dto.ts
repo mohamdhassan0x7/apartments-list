@@ -1,4 +1,5 @@
-import { IsOptional, IsPositive, IsString,  } from 'class-validator';
+import { Transform } from 'class-transformer';
+import { IsOptional, IsPositive, IsString } from 'class-validator';
 
 export class CreateApartmentDto {
   @IsString()
@@ -11,6 +12,7 @@ export class CreateApartmentDto {
   project: string;
 
   @IsPositive()
+  @Transform(({ value }) => parseFloat(value))
   price: number;
 
   @IsString()
