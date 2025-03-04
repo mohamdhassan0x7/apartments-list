@@ -9,7 +9,7 @@ This is a **full-stack apartment listing app** built with **NestJS (backend), Ne
 ### 1️⃣ Clone the Repository  
 
 ### 2️⃣ Set Up Environment Variables
-> backend/.en
+> backend/.env
 ```sh
 # Database Config
 DATABASE_HOST=database
