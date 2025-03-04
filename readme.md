@@ -1,7 +1,7 @@
 # 🏡 Apartment Listing App - Quick Setup Guide  
 
 This is a **full-stack apartment listing app** built with **NestJS (backend), Next.js (frontend), PostgreSQL, and Cloudinary**.  
-
+> note: first created user will have 'admin' role who have privilege to add new apartments
 ---
 
 ## 🚀 Setup & Run the Project  
