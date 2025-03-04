@@ -19,13 +19,16 @@ export class UsersService {
 
   async signUp(createUserDto: CreateUserDto) {
     const { name, email, password } = createUserDto;
-
     const existingUser = await this.userRepository.findOne({
       where: { email },
     });
     if (existingUser) {
       throw new ConflictException('Email already exists');
     }
+
+    const userCount = await this.userRepository.count();
+    const role = userCount === 0 ? 'admin' : 'user';
+
     const saltRounds = parseInt(
       this.configService.get<string>('saltRounds') || '10',
       10,
@@ -36,14 +39,17 @@ export class UsersService {
       name,
       email,
       password: hashedPassword,
+      role,
     });
 
     const user = await this.userRepository.save(newUser);
     return {
       name: user.name,
       email: user.email,
+      role: user.role,
     };
   }
+
   async signIn(LogiUserDto: LoginUserDto) {
     const { email, password } = LogiUserDto;
     const user = await this.userRepository.findOne({ where: { email } });
