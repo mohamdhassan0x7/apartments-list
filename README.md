@@ -1,7 +1,7 @@
 # 🏡 Apartment Listing App - Quick Setup Guide  
 
 This is a **full-stack apartment listing app** built with **NestJS (backend), Next.js (frontend), PostgreSQL, and Cloudinary**.  
-
+> note: first created user will have 'admin' role who have privilege to add new apartments
 ---
 
 ## 🚀 Setup & Run the Project  
@@ -37,9 +37,19 @@ docker-compose up --build
 ✅ This will start Frontend (Next.js), Backend (NestJS), and PostgreSQL.
 
 ##🌍 Access the Application
-> Frontend: http://localhost:3000 |
-> Backend API: http://localhost:5000 |
+> Frontend: http://localhost:3033 |
+> Backend API: http://localhost:5055 |
 > Database: PostgreSQL runs on port 5432
+
+### access Database tables
+- localhost:5050/browser/
+    - email: admin@example.com
+    - password: admin 
+- register a new server
+    - name: postgresDB
+    - host: databaase
+    - username: user
+    - password: password
 
 ## Project structure
 ```sh
@@ -59,4 +69,3 @@ apartment-listing-app/
 │── docker-compose.yml   # Runs the entire project with Docker
 │── README.md      # Setup Guide
 ```
-
