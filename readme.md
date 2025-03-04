@@ -37,8 +37,8 @@ docker-compose up --build
 ✅ This will start Frontend (Next.js), Backend (NestJS), and PostgreSQL.
 
 ##🌍 Access the Application
-> Frontend: http://localhost:3000 |
-> Backend API: http://localhost:5000 |
+> Frontend: http://localhost:3033 |
+> Backend API: http://localhost:5055 |
 > Database: PostgreSQL runs on port 5432
 
 ### access Database tables

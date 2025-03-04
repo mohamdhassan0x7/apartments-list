@@ -23,7 +23,7 @@ services:
     environment:
       DATABASE_URL: postgres://user:password@database:5432/nawy
     ports:
-      - "5000:5000"
+      - "5055:5000"
     volumes:
       - ./backend:/app
       - /app/node_modules
@@ -37,7 +37,7 @@ services:
     depends_on:
       - backend
     ports:
-      - "3000:3000"
+      - "3033:3000"
     volumes:
       - ./frontend:/app
       - /app/node_modules 
