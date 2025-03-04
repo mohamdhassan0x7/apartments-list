@@ -41,6 +41,16 @@ docker-compose up --build
 > Backend API: http://localhost:5000 |
 > Database: PostgreSQL runs on port 5432
 
+### access Database tables
+- localhost:5050/browser/
+    - email: admin@example.com
+    - password: admin 
+- register new server
+    - name: postgresDB
+    - host: databaase
+    - username: user
+    - password: password
+
 ## Project structure
 ```sh
 apartment-listing-app/
